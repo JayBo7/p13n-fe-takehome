@@ -1,8 +1,6 @@
 
 const cols = document.getElementsByClassName("column");
 
-var scroll_position = 0;
-var ticking = false;
 var viewedCols = {};
 
 window.addEventListener('scroll', (e) => {
@@ -17,7 +15,6 @@ window.addEventListener('scroll', (e) => {
 
 const checkVisibility = col => {
 
-	var visible = false;
 	var element = document.querySelector(`#${col.getAttribute('id')}`);
 	var top = element.getBoundingClientRect().top + parseFloat(getComputedStyle(element).paddingTop)
 	var bottom = element.getBoundingClientRect().bottom - parseFloat(getComputedStyle(element).paddingBottom)
